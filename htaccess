@@ -1,0 +1,32 @@
+ErrorDocument 403 /project24307756/page133820656.html
+ErrorDocument 404 /project24307756/page133820656.html
+
+DirectoryIndex page74342581.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/project24307756/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^alionagloball$ page74342581.html [NC]
+RewriteRule ^alionagloball/$ page74342581.html [NC]
+
+RewriteRule ^galerea-aliona$ page74342585.html [NC]
+RewriteRule ^galerea-aliona/$ page74342585.html [NC]
+
+RewriteRule ^dogovor-aliona$ page74342589.html [NC]
+RewriteRule ^dogovor-aliona/$ page74342589.html [NC]
+
+RewriteRule ^cookie-aliona$ page74342591.html [NC]
+RewriteRule ^cookie-aliona/$ page74342591.html [NC]
+
+RewriteRule ^menu$ page133820476.html [NC]
+RewriteRule ^menu/$ page133820476.html [NC]
+
+RewriteRule ^pop$ page133820556.html [NC]
+RewriteRule ^pop/$ page133820556.html [NC]
+
+RewriteRule ^non$ page133820656.html [NC]
+RewriteRule ^non/$ page133820656.html [NC]
+
+
