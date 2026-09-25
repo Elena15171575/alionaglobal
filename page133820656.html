@@ -3,8 +3,9 @@
 <head> 
     <meta charset="utf-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>Пользовательское соглашение — Aliona Globall</title> 
+    <title>Контакты — САЙТЛАЙМ</title> 
     
+    <!-- Подключение базовых шрифтов и сетки --> 
     <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" type="text/css" media="all" /> 
     <link rel="stylesheet" href="css/fonts-tildasans.css" type="text/css" media="all" /> 
     
@@ -12,69 +13,161 @@
         body {
             margin: 0;
             font-family: 'TildaSans', Arial, sans-serif;
-            background-color: #fcfcfc;
+            background-color: #faf7f5; /* Нежный пастельный фон */
             color: #222222;
-            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Интерактивное верхнее меню */
+        header {
+            background-color: #ffffff; 
+            border-bottom: 1px solid #eaeaea; 
+            height: 80px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 999;
+            width: 100%;
+        }
+        .header-container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 80px; 
+            padding: 0 20px; 
+            box-sizing: border-box;
+        }
+        .logo-text {
+            font-size: 18px; 
+            font-weight: 700; 
+            letter-spacing: 1px; 
+            text-transform: uppercase;
+        }
+        .t-menu__list {
+            display: flex; 
+            list-style: none; 
+            gap: 25px; 
+            margin: 0; 
+            padding: 0;
         }
         .t229__list_item a {
-            position: relative !important;
-            transition: color 0.3s ease-in-out !important;
+            color: #000000; 
+            text-decoration: none; 
+            font-size: 13px; 
+            font-weight: 700; 
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s ease-in-out;
         }
         .t229__list_item a::after {
-            content: '' !important;
-            position: absolute !important;
-            width: 100% !important;
-            transform: scaleX(0) !important;
-            height: 2px !important;
-            bottom: -5px !important;
-            left: 0 !important;
-            background-color: #895171 !important; 
-            transform-origin: bottom right !important;
-            transition: transform 0.3s ease-out !important;
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #895171; 
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
         }
         .t229__list_item a:hover::after {
-            transform: scaleX(1) !important;
-            transform-origin: bottom left !important;
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
-        .legal-container {
-            max-width: 800px;
-            margin: 60px auto;
+
+        /* Центрированный контейнер контента */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 40px 20px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
-        .legal-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 30px;
+
+        /* Стильная карточка контактов по центру */
+        .contacts-card {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(137, 81, 113, 0.06);
+            max-width: 550px;
+            width: 100%;
             text-align: center;
+            box-sizing: border-box;
+        }
+        .contacts-title {
+            font-size: 32px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin: 0 0 15px 0;
+            color: #111111;
         }
-        .legal-section {
-            margin-bottom: 25px;
+        .contacts-subtitle {
+            font-size: 15px;
+            color: #777777;
+            line-height: 1.6;
+            margin-bottom: 40px;
         }
-        .legal-section h2 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 10px;
+
+        /* Список контактов */
+        .contacts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .contact-row {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f3f3f3;
+        }
+        .contact-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .contact-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: #895171;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
-        .legal-section p {
-            font-size: 14px;
-            color: #444444;
-            margin: 0 0 10px 0;
+        .contact-value a {
+            font-size: 20px;
+            color: #111111;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
-        .saitlaim-link-style {
+        .contact-value a:hover {
+            color: #c34747;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #111111; 
+            padding: 40px 20px; 
+            color: #ffffff; 
+            text-align: center;
+            font-size: 13px;
+        }
+        .footer-text {
+            opacity: 0.6;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .saitlaim-link {
             color: #ff5c5c !important;
             text-decoration: none !important;
             font-weight: bold !important;
             border-bottom: 1px dashed #ff5c5c !important;
             transition: all 0.3s ease !important;
         }
-        .saitlaim-link-style:hover {
+        .saitlaim-link:hover {
             color: #ffffff !important;
             border-bottom: 1px solid #ffffff !important;
         }
@@ -82,64 +175,64 @@
 </head> 
 <body> 
 
-    <!-- НАВИГАЦИОННОЕ МЕНЮ -->
-    <header style="background-color:#ffffff; border-bottom:1px solid #eee; height:80px; position:sticky; top:0; z-index:999;"> 
-        <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; height:80px; padding:0 20px; box-sizing:border-box;"> 
-            <div style="font-size:18px; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Aliona Globall</div> 
-            <nav class="t229__centerside"> 
-                <ul style="display:flex; list-style:none; gap:25px; margin:0; padding:0;" class="t-menu__list"> 
-                    <li class="t229__list_item"> <a style="color:#000; text-decoration:none; font-size:13px; font-weight:700; text-transform:uppercase;" href="index.html#rec1240270621">Об авторе</a> </li> 
-                    <li class="t229__list_item"> <a style="color:#000; text-decoration:none; font-size:13px; font-weight:700; text-transform:uppercase;" href="page133820476.html">Галерея</a> </li> 
-                    <li class="t229__list_item"> <a style="color:#000; text-decoration:none; font-size:13px; font-weight:700; text-transform:uppercase;" href="index.html#rec1240270656">Доставка</a> </li> 
-                    <li class="t229__list_item"> <a style="color:#000; text-decoration:none; font-size:13px; font-weight:700; text-transform:uppercase;" href="page133820656.html">Контакты</a> </li> 
+    <!-- ВЕРХНЕЕ НАВИГАЦИОННОЕ МЕНЮ -->
+    <header> 
+        <div class="header-container"> 
+            <div class="logo-text">Aliona Globall</div> 
+            <nav> 
+                <ul class="t-menu__list"> 
+                    <li class="t229__list_item"> <a href="index.html#rec1240270621">Об авторе</a> </li> 
+                    <li class="t229__list_item"> <a href="page133820476.html">Галерея</a> </li> 
+                    <li class="t229__list_item"> <a href="index.html#rec1240270656">Доставка</a> </li> 
+                    <li class="t229__list_item"> <a href="page133820656.html">Контакты</a> </li> 
                 </ul> 
             </nav> 
         </div> 
     </header> 
 
-    <!-- ЮРИДИЧЕСКИЙ ТЕКСТ СОГЛАШЕНИЯ -->
-    <main class="legal-container">
-        <h1 class="legal-title">Пользовательское соглашение</h1>
-        
-        <div class="legal-section">
-            <h2>1. Общие положения</h2>
-            <p>Настоящее Соглашение определяет условия использования материалов и сервисов демонстрационного сайта Aliona Globall, разработанного веб-студией САЙТЛАЙМ (ИП Воробьева Елена Борисовна). Используя данный сайт, Пользователь выражает свое согласие с условиями настоящего Соглашения.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>2. Обработка персональных данных</h2>
-            <p>При заполнении любых форм обратной связи на данном сайте, Пользователь предоставляет свои персональные данные (Имя, Телефон, E-mail) и дает полное согласие на их автоматизированную обработку в целях консультирования и демонстрации возможностей платформы.</p>
-            <p>Студия обязуется обеспечивать конфиденциальность предоставленных данных и использовать их исключительно для связи с Пользователем.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>3. Использование файлов Cookie</h2>
-            <p>Данный сайт использует файлы cookie для сбора технических данных и улучшения взаимодействия с интерфейсом. Нажимая кнопку «ОК» на главной странице, вы соглашаетесь с Политикой использования cookie-файлов.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>4. Статус демонстрационного образца</h2>
-            <p>Настоящий интернет-магазин является интерактивным демонстрационным образцом (портфолио). Любое копирование исходного кода, структуры, дизайна или графических материалов Алены Глобалл третьими лицами без согласия правообладателя строго запрещено.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>5. Реквизиты Администрации сайта</h2>
-            <p>ИП Воробьева Елена Борисовна</p>
-            <p>ИНН: 691505013783 | ОГРН: 324508100020542</p>
-            <p>Местонахождение: г. Мытищи</p>
-            <p>Официальный контактный e-mail: saitlaim@mail.ru</p>
+    <!-- ОСНОВНОЙ СТИЛЬНЫЙ БЛОК ПО ЦЕНТРУ -->
+    <main class="main-content">
+        <div class="contacts-card">
+            <h1 class="contacts-title">Контакты</h1>
+            <p class="contacts-subtitle">Сайт разработан в качестве демонстрационного образца веб-студии САЙТЛАЙМ. Свяжитесь с нами напрямую по любым вопросам.</p>
+            
+            <div class="contacts-list">
+                <!-- Телефон -->
+                <div class="contact-row">
+                    <div class="contact-label">Телефон студии</div>
+                    <div class="contact-value"><a href="tel:+79778005981">8 (977) 800-59-81</a></div>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-row">
+                    <div class="contact-label">Электронная почта</div>
+                    <div class="contact-value"><a href="mailto:saitlaim@mail.ru">saitlaim@mail.ru</a></div>
+                </div>
+                
+                <!-- Telegram Канал -->
+                <div class="contact-row">
+                    <div class="contact-label">Наш Telegram канал</div>
+                    <div class="contact-value"><a href="https://t.me" target="_blank" rel="noopener">@saitlaim</a></div>
+                </div>
+                
+                <!-- Личный Telegram -->
+                <div class="contact-row">
+                    <div class="contact-label">Личная связь в Telegram</div>
+                    <div class="contact-value"><a href="https://t.me" target="_blank" rel="noopener">@elenavorobueva</a></div>
+                </div>
+            </div>
         </div>
     </main>
 
     <!-- СТИЛЬНЫЙ БРЕНДИРОВАННЫЙ ПОДВАЛ -->
-    <footer style="background-color:#111111; padding:50px 20px; color:#ffffff; font-family:'TildaSans',Arial,sans-serif; text-align:center;"> 
+    <footer> 
         <div class="t-container"> 
-            <div style="font-size:13px; opacity:0.6; line-height:1.7;">
-                <p style="margin:0 0 5px 0;">ИП Воробьева Елена Борисовна | ОГРН 324508100020542 | ИНН 691505013783</p>
-                <p style="margin:0 0 15px 0;">&copy; 2026 Aliona Globall. Все права защищены. Любое копирование материалов запрещено.</p>
-                <div style="margin-top:15px;">
-                    Образец разработан автором-студией 
-                    <a href="https://saitlaim.ru" target="_blank" rel="noopener" class="saitlaim-link-style">САЙТЛАЙМ</a>
+            <div class="footer-text">
+                <p style="margin: 0 0 5px 0;">ИП Воробьева Елена Борисовна | ОГРН 324508100020542 | ИНН 691505013783 | г. Мытищи</p>
+                <p style="margin: 0 0 15px 0;">&copy; 2026 Aliona Globall. Все права защищены.</p>
+                <div style="margin-top: 15px;">
+                    Сайт не коммерческий и является образцом студии  
+                    <a href="https://saitlaim.ru" target="_blank" rel="noopener" class="saitlaim-link">САЙТЛАЙМ</a>
                 </div>
             </div> 
         </div> 
