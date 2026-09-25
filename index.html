@@ -74,6 +74,25 @@
             color: #ffffff !important;
             border-bottom: 1px solid #ffffff !important;
         }
+               /* Правильная адаптация: скрываем бургер на ПК и показываем только на мобильных */
+        @media screen and (min-width: 981px) {
+            .tmenu-mobile { 
+                display: none !important; 
+            }
+        }
+        @media screen and (max-width: 980px) {
+            .tmenu-mobile { 
+                display: block !important; 
+                background-color: #ffffff !important;
+            }
+            .tmenu-mobile__text {
+                color: #000000 !important;
+            }
+            .t-menuburger span {
+                background-color: #000000 !important;
+            }
+        }
+ 
     </style>
 </head> 
 <body class="t-body" style="margin:0;"> 
