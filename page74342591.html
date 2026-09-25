@@ -87,38 +87,47 @@
 <div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="24307756" data-tilda-page-id="74342591" data-tilda-page-alias="cookie-aliona" data-tilda-formskey="d6efe17c2c53d7b0143ab84924307756" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-ts="y" data-tilda-project-country="RU">
     <!-- ЧАСТЬ 2: НАВИГАЦИЯ И ТЕКСТ ПОЛИТИКИ COOKIE СТУДИИ САЙТЛАЙМ -->
     <header id="t-header" class="t-records"> 
-        <div id="rec2148572911" class="r t-rec t-rec_pb_0" style="padding-bottom:0px;background-color:#ffffff; " data-animationappear="off" data-record-type="258" data-bg-color="#ffffff"> 
-            <div id="nav2148572911marker"></div> 
-            <div class="tmenu-mobile"> 
-                <div class="tmenu-mobile__container"> 
-                    <div class="tmenu-mobile__text t-name t-name_md" field="menu_mob_title">&nbsp;</div> 
-                    <button type="button" class="t-menuburger t-menuburger_fourth " aria-label="Навигационное меню" aria-expanded="false"> 
-                        <span style="background-color:#000;"></span> <span style="background-color:#000;"></span> <span style="background-color:#000;"></span> <span style="background-color:#000;"></span> 
-                    </button> 
-                    <script>
-                        function t_menuburger_init(recid) {
-                            var rec=document.querySelector('#rec' + recid);if(!rec) return;
-                            var burger=rec.querySelector('.t-menuburger');if(!burger) return;
-                            burger.addEventListener('click',function() {
-                                burger.classList.toggle('t-menuburger-opened');
-                            });
-                        }
-                        t_onReady(function() {t_onFuncLoad('t_menuburger_init',function(){t_menuburger_init('2148572911');});});
-                    </script> 
-                </div> 
-            </div>
-
-            <div id="nav2148572911" class="t229 t229__positionfixed t229__beforeready tmenu-mobile__menucontent_hidden" style="background-color: rgba(255,255,255,0.95); height:80px; " data-menu="yes"> 
-                <div class="t229__maincontainer " style="height:80px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;"> 
-                    <div style="font-size:18px; font-weight:700; letter-spacing:1px; text-transform:uppercase; font-family:'TildaSans',Arial,sans-serif;"><a href="index.html" style="color: #000000; text-decoration: none;">Aliona Globall</a></div> 
-                    <nav class="t229__centerside"> 
-                        <ul role="list" class="t-menu__list" style="display: flex; list-style: none; gap: 25px; margin: 0; padding: 0;"> 
-                            <li class="t229__list_item"> <a class="t-menu__link-item" href="index.html#rec1240270621">Об авторе</a> </li> 
-                            <li class="t229__list_item"> <a class="t-menu__link-item" href="page133820556.html">Галерея</a> </li> 
-                            <li class="t229__list_item"> <a class="t-menu__link-item" href="index.html#rec1240270656">Доставка</a> </li> 
-                            <li class="t229__list_item"> <a class="t-menu__link-item" href="page133820656.html">Контакты</a> </li> 
+         <!-- ВЕРХНЕЕ МЕНЮ С АНИМИРОВАННОЙ ЛИАНОЙ И РАСПУСКАЮЩИМИСЯ ЦВЕТАМИ -->
+            <div id="nav2148572911" class="t229 t229__positionfixed" style="background-color: rgba(255,255,255,0.95); height:80px; width:100%; position:fixed; top:0; left:0; z-index:999;" data-menu="yes"> 
+                <div style="height:80px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;"> 
+                    <div style="font-size:20px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; font-family:'TildaSans',Arial,sans-serif;">
+                        <a href="index.html" style="color: #000000; text-decoration: none;">Aliona Globall</a>
+                    </div>
+                    <nav> 
+                        <ul style="display: flex; list-style: none; gap: 30px; margin: 0; padding: 0; font-family:'TildaSans',Arial,sans-serif;"> 
+                            <li class="t229__list_item"> <a href="index.html#rec1240270621" style="color:#000000; text-decoration:none; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Об авторе</a> </li> 
+                            <li class="t229__list_item"> <a href="page133820556.html" style="color:#000000; text-decoration:none; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Галерея</a> </li> 
+                            <li class="t229__list_item"> <a href="index.html#rec1240270656" style="color:#000000; text-decoration:none; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Доставка</a> </li> 
+                            <li class="t229__list_item"> <a href="page133820656.html" style="color:#895171; text-decoration:none; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Контакты</a> </li> 
                         </ul> 
                     </nav> 
+                </div>
+
+                <!-- Контейнер для нашей интерактивной лианы -->
+                <div class="liana-progress-container" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 6px; background-color: #f3ebe6; overflow: visible;">
+                    <div id="liana-line" style="height: 100%; width: 0%; background: linear-gradient(90deg, #5a8f56, #82b77d); transition: width 0.1s ease-out; position: relative;">
+                        <span class="flower" id="fl-1" style="position: absolute; right: 80%; top: -3px; font-size: 12px; transform: scale(0); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;">🌸</span>
+                        <span class="flower" id="fl-2" style="position: absolute; right: 50%; top: -3px; font-size: 12px; transform: scale(0); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;">🌸</span>
+                        <span class="flower" id="fl-3" style="position: absolute; right: 20%; top: -3px; font-size: 12px; transform: scale(0); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;">🌸</span>
+                        <span class="flower" id="fl-4" style="position: absolute; right: 2%; top: -3px; font-size: 14px; transform: scale(0); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;">🌺</span>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                window.addEventListener('scroll', function() {
+                    var winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    var scrolled = (winScroll / height) * 100;
+                    var liana = document.getElementById('liana-line');
+                    if (liana) { liana.style.width = scrolled + '%'; }
+                    var f1 = document.getElementById('fl-1'); var f2 = document.getElementById('fl-2'); var f3 = document.getElementById('fl-3'); var f4 = document.getElementById('fl-4');
+                    if (f1) f1.style.transform = scrolled >= 20 ? 'scale(1) rotate(15deg)' : 'scale(0)';
+                    if (f2) f2.style.transform = scrolled >= 50 ? 'scale(1) rotate(-10deg)' : 'scale(0)';
+                    if (f3) f3.style.transform = scrolled >= 80 ? 'scale(1) rotate(20deg)' : 'scale(0)';
+                    if (f4) f4.style.transform = scrolled >= 97 ? 'scale(1.2) rotate(0deg)' : 'scale(0)';
+                });
+            </script>
                 </div> 
             </div> 
             <script>t_onReady(function() {var rec=document.querySelector('#rec2148572911');if(!rec) return;var burger=rec.querySelector('.t-menuburger');if(burger) {t_onFuncLoad('t_menu__createMobileMenu',function() {t_menu__createMobileMenu('2148572911','.t229');});} t_onFuncLoad('t_menu__highlightActiveLinks',function() {t_menu__highlightActiveLinks('.t229__list_item a');});rec.querySelector('.t229').classList.remove('t229__beforeready');t_onFuncLoad('t_menu__findAnchorLinks',function() {t_menu__findAnchorLinks('2148572911','.t229__list_item a');});</script> 
