@@ -1,136 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--metatextblock-->
-    <title>Aliona Globall</title>
-    <meta name="description" content="Интернет-магазин картин " />
-    <meta property="og:url" content="https://alionagl.tilda.ws" />
-    <meta property="og:title" content="Aliona Globall" />
-    <meta property="og:description" content="Интернет-магазин картин " />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/tild3131-3035-4461-b461-353137333238__-__resize__504x__photo_2024-11-16_17-.jpg" />
-    <link rel="canonical" href="index.html">
-    <!--/metatextblock-->
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <link rel="dns-prefetch" href="index.html"> 
-    <link rel="shortcut icon" href="images/tildafavicon.ico" type="image/x-icon" />
+    <title>Aliona Globall — Интернет-магазин картин</title>
     
-    <!-- Assets -->
-    <script src="https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js" async charset="utf-8"></script>
+    <!-- Подключение базовых стилей Tilda для сетки и шрифтов -->
     <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/tilda-blocks-page74342581.min.css?t=1775943231" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/tilda-animation-2.0.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/tilda-slds-1.4.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/tilda-forms-1.0.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/tilda-cover-1.0.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/fonts-tildasans.css" type="text/css" media="all" />
-    
-    <script nomodule src="js/tilda-polyfill-1.0.min.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        function t_onReady(func) {if(document.readyState!='loading') {func();} else {document.addEventListener('DOMContentLoaded',func);}}
-        function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='function') {okFunc();} else {setTimeout(function() {t_onFuncLoad(funcName,okFunc,time);},(time||100));}}
-        function t_throttle(fn,threshhold,scope) {return function() {fn.apply(scope||this,arguments);};}
-    </script>
-    
-    <script src="js/tilda-scripts-3.0.min.js" charset="utf-8" defer></script>
-    <script src="js/tilda-blocks-page74342581.min.js?t=1775943231" charset="utf-8" async></script>
-    <script src="js/lazyload-1.3.min.export.js" charset="utf-8" async></script>
-    <script src="js/tilda-animation-2.0.min.js" charset="utf-8" async></script>
-    <script src="js/tilda-slds-1.4.min.js" charset="utf-8" async></script>
-    <script src="js/hammer.min.js" charset="utf-8" async></script>
-    <script src="js/tilda-forms-1.0.min.js" charset="utf-8" async></script>
-    <script src="js/tilda-cover-1.0.min.js" charset="utf-8" async></script>
-    <script src="js/tilda-menu-1.0.min.js" charset="utf-8" async></script>
-    <script src="js/tilda-skiplink-1.0.min.js" charset="utf-8" async></script>
-    <script src="js/tilda-events-1.0.min.js" charset="utf-8" async></script>
 
-    <!-- Свои стили для плавной анимации, меню и подвала -->
     <style>
-        /* Анимация плавного появления контента */
-        .t-records {
+        /* Общие стили и плавная анимация появления страницы */
+        body {
+            margin: 0;
+            font-family: 'TildaSans', Arial, sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
             opacity: 0;
-            animation: fadeInSite 0.8s ease-in-out forwards;
+            animation: fadeInSite 1s ease-in-out forwards;
         }
         @keyframes fadeInSite {
             to { opacity: 1; }
         }
 
-        /* Эффект интерактивного меню (плавное подчеркивание ссылок) */
-        .t-menu__link-item {
-            position: relative;
+        /* Красивая интерактивная шапка сайта */
+        .custom-header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            padding: 20px;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .main-menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Эффект плавного подчеркивания для активного меню */
+        .main-menu a {
+            color: #111;
             text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
             transition: color 0.3s ease;
         }
-        .t-menu__link-item::after {
+        .main-menu a::after {
             content: '';
             position: absolute;
             width: 100%;
             transform: scaleX(0);
             height: 2px;
-            bottom: -4px;
+            bottom: 0;
             left: 0;
-            background-color: #000; /* Цвет линии при наведении, можно изменить */
+            background-color: #111;
             transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
+            transition: transform 0.3s ease-out;
         }
-        .t-menu__link-item:hover::after {
+        .main-menu a:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
         }
 
-        /* Стили для будущего красивого подвала */
-        .custom-footer {
-            background-color: #111;
-            color: #fff;
-            padding: 40px 20px;
+        /* Приветственный блок-обложка сайта с анимацией */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/tild3131-3035-4461-b461-353137333238__-__resize__504x__photo_2024-11-16_17-.jpg') no-center/cover;
+            background-position: center;
+            background-size: cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
             text-align: center;
-            font-family: 'TildaSans', Arial, sans-serif;
+            padding: 20px;
+        }
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Стили для красивого брендированного подвала */
+        .custom-footer {
+            background-color: #111111;
+            color: #888888;
+            padding: 50px 20px;
+            text-align: center;
             font-size: 14px;
+            border-top: 1px solid #222;
+            margin-top: 50px;
         }
-        .custom-footer a {
-            color: #ff5c5c; /* Выделенный цвет для ссылки */
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-studio {
+            margin-top: 15px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        .footer-studio a {
+            color: #ffffff;
             text-decoration: none;
-            border-bottom: 1px dashed #ff5c5c;
+            font-weight: 600;
+            border-bottom: 1px dashed #ffffff;
             transition: all 0.3s ease;
+            margin-left: 4px;
         }
-        .custom-footer a:hover {
-            color: #fff;
-            border-bottom: 1px solid #fff;
+        .footer-studio a:hover {
+            color: #ff5c5c;
+            border-bottom: 1px solid #ff5c5c;
         }
     </style>
-</head> 
-<body class="t-body" style="margin:0;"> 
-<!--allrecords--> 
-<div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="24307756" data-tilda-page-id="74342581" data-tilda-page-alias="alionagloball" data-tilda-formskey="d6efe17c2c53d7b0143ab84924307756" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-ts="y" data-tilda-project-country="RU"> 
+</head>
+<body>
 
-<!--header--> 
-<header id="t-header" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="24307756" data-tilda-page-id="133820476" data-tilda-page-alias="menu" data-tilda-formskey="d6efe17c2c53d7b0143ab84924307756" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-ts="y" data-tilda-project-country="RU"> 
-    <div id="rec2148572911" class="r t-rec t-rec_pb_0" style="padding-bottom:0px;background-color:#ffffff; " data-animationappear="off" data-record-type="258" data-bg-color="#ffffff"> 
-        <div id="nav2148572911marker"></div> 
-        <div class="tmenu-mobile"> 
-            <div class="tmenu-mobile__container"> 
-                <div class="tmenu-mobile__text t-name t-name_md" field="menu_mob_title">&nbsp;</div> 
-                <button type="button" class="t-menuburger t-menuburger_fourth " aria-label="Навигационное меню" aria-expanded="false"> 
-                    <span style="background-color:#000;"></span> 
-                    <span style="background-color:#000;"></span> 
-                    <span style="background-color:#000;"></span> 
-                    <span style="background-color:#000;"></span> 
-                </button> 
-                <script>
-                    function t_menuburger_init(recid) {
-                        var rec = document.querySelector('#rec' + recid);
-                        if (!rec) return;
-                        var burger = rec.querySelector('.t-menuburger');
-                        if (!burger) return;
-                        burger.addEventListener('click', function() {
-                            burger.classList.toggle('t-menuburger-opened');
-                        });
-                    }
-                    t_menuburger_init('2148572911');
-                </script>
+    <!-- ИНТЕРАКТИВНОЕ МЕНЮ (ШАПКА) -->
+    <header class="custom-header">
+        <div class="header-container">
+            <div class="logo">Aliona Globall</div>
+            <nav>
+                <ul class="main-menu">
+                    <!-- ССЫЛКИ НА ВАШИ СТРАНИЦЫ (Относительные пути, которые не сломаются на GitHub) -->
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="page133820476.html">Каталог</a></li>
+                    <li><a href="page133820556.html">О нас</a></li>
+                    <li><a href="page133820656.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- СТАРТОВАЯ ОБЛОЖКА САЙТА С АНИМАЦИЕЙ -->
+    <section class="hero-section">
+        <h1>Интернет-магазин картин</h1>
+        <p style="font-size: 18px; max-width: 600px;">Добро пожаловать в галерею авторского искусства Aliona Globall</p>
+    </section>
+
+    <!-- КРАСИВЫЙ ПОДВАЛ С ВАШИМ БРЕНДИНГОМ -->
+    <footer class="custom-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Aliona Globall. Все права защищены. Интернет-магазин картин.</p>
+            <div class="footer-studio">
+                Сайт разработан в качестве образца автора-студии 
+                <a href="https://saitlaim.ru" target="_blank" rel="noopener">САЙТЛАЙМ</a>
             </div>
         </div>
+    </footer>
+
+</body>
+</html>
