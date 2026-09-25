@@ -1,178 +1,198 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aliona Globall — Интернет-магазин картин</title>
+<head> 
+    <meta charset="utf-8" /> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Aliona Globall</title> 
+    <meta name="description" content="Интернет-магазин картин " /> 
+    <meta property="og:url" content="https://tilda.ws" /> 
+    <meta property="og:title" content="Aliona Globall" /> 
+    <meta property="og:description" content="Интернет-магазин картин " /> 
+    <meta property="og:type" content="website" /> 
+    <meta property="og:image" content="images/tild3131-3035-4461-b461-353137333238__-__resize__504x__photo_2024-11-16_17-.jpg" /> 
+    <link rel="canonical" href="index.html"> 
+    <meta name="format-detection" content="telephone=no" /> 
+    <link rel="shortcut icon" href="images/tildafavicon.ico" type="image/x-icon" /> 
     
-    <!-- Подключение базовых стилей Tilda для сетки и шрифтов -->
-    <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/fonts-tildasans.css" type="text/css" media="all" />
+    <script src="https://tildacdn.com" async charset="utf-8"></script> 
+    <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" type="text/css" media="all" /> 
+    <link rel="stylesheet" href="css/tilda-blocks-page74342581.min.css?t=1775943231" type="text/css" media="all" /> 
+    <link rel="stylesheet" href="css/tilda-animation-2.0.min.css" type="text/css" media="all" /> 
+    <link rel="stylesheet" href="css/tilda-slds-1.4.min.css" type="text/css" media="all" /> 
+    <link rel="stylesheet" href="css/tilda-forms-1.0.min.css" type="text/css" media="all" /> 
+    <link rel="stylesheet" href="css/tilda-cover-1.0.min.css" type="text/css" media="all" /> 
+    <link rel="stylesheet" href="css/fonts-tildasans.css" type="text/css" media="all" /> 
+    
+    <script nomodule src="js/tilda-polyfill-1.0.min.js" charset="utf-8"></script> 
+    <script type="text/javascript">
+        function t_onReady(func) {if(document.readyState!='loading') {func();} else {document.addEventListener('DOMContentLoaded',func);}}
+        function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='function') {okFunc();} else {setTimeout(function() {t_onFuncLoad(funcName,okFunc,time);},(time||100));}}
+        function t_throttle(fn,threshhold,scope) {return function() {fn.apply(scope||this,arguments);};}
+    </script> 
+    
+    <script src="js/tilda-scripts-3.0.min.js" charset="utf-8" defer></script> 
+    <script src="js/tilda-blocks-page74342581.min.js?t=1775943231" charset="utf-8" async></script> 
+    <script src="js/lazyload-1.3.min.export.js" charset="utf-8" async></script> 
+    <script src="js/tilda-animation-2.0.min.js" charset="utf-8" async></script> 
+    <script src="js/tilda-slds-1.4.min.js" charset="utf-8" async></script> 
+    <script src="js/hammer.min.js" charset="utf-8" async></script> 
+    <script src="js/tilda-forms-1.0.min.js" charset="utf-8" async></script> 
+    <script src="js/tilda-cover-1.0.min.js" charset="utf-8" async></script> 
+    <script src="js/tilda-menu-1.0.min.js" charset="utf-8" async></script> 
+    <script src="js/tilda-events-1.0.min.js" charset="utf-8" async></script> 
 
     <style>
-        /* Общие стили и плавная анимация появления страницы */
-        body {
-            margin: 0;
-            font-family: 'TildaSans', Arial, sans-serif;
-            background-color: #fcfcfc;
-            color: #333;
-            opacity: 0;
-            animation: fadeInSite 1s ease-in-out forwards;
+        .t229__list_item a {
+            position: relative !important;
+            transition: color 0.3s ease-in-out !important;
         }
-        @keyframes fadeInSite {
-            to { opacity: 1; }
+        .t229__list_item a::after {
+            content: '' !important;
+            position: absolute !important;
+            width: 100% !important;
+            transform: scaleX(0) !important;
+            height: 2px !important;
+            bottom: -5px !important;
+            left: 0 !important;
+            background-color: #895171 !important; 
+            transform-origin: bottom right !important;
+            transition: transform 0.3s ease-out !important;
         }
-
-        /* Красивая интерактивная шапка сайта */
-        .custom-header {
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            padding: 20px;
+        .t229__list_item a:hover::after {
+            transform: scaleX(1) !important;
+            transform-origin: bottom left !important;
         }
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .saitlaim-link-style {
+            color: #ff8e8e !important;
+            text-decoration: none !important;
+            font-weight: bold !important;
+            border-bottom: 1px dashed #ff8e8e !important;
+            transition: all 0.3s ease !important;
         }
-        .logo {
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .main-menu {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Эффект плавного подчеркивания для активного меню */
-        .main-menu a {
-            color: #111;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            position: relative;
-            padding: 5px 0;
-            transition: color 0.3s ease;
-        }
-        .main-menu a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #111;
-            transform-origin: bottom right;
-            transition: transform 0.3s ease-out;
-        }
-        .main-menu a:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-
-        /* Приветственный блок-обложка сайта с анимацией */
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/tild3131-3035-4461-b461-353137333238__-__resize__504x__photo_2024-11-16_17-.jpg') no-center/cover;
-            background-position: center;
-            background-size: cover;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .hero-section h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: slideUp 0.8s ease-out forwards;
-        }
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        /* Стили для красивого брендированного подвала */
-        .custom-footer {
-            background-color: #111111;
-            color: #888888;
-            padding: 50px 20px;
-            text-align: center;
-            font-size: 14px;
-            border-top: 1px solid #222;
-            margin-top: 50px;
-        }
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .footer-studio {
-            margin-top: 15px;
-            font-size: 13px;
-            letter-spacing: 0.5px;
-        }
-        .footer-studio a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px dashed #ffffff;
-            transition: all 0.3s ease;
-            margin-left: 4px;
-        }
-        .footer-studio a:hover {
-            color: #ff5c5c;
-            border-bottom: 1px solid #ff5c5c;
+        .saitlaim-link-style:hover {
+            color: #ffffff !important;
+            border-bottom: 1px solid #ffffff !important;
         }
     </style>
-</head>
-<body>
-
-    <!-- ИНТЕРАКТИВНОЕ МЕНЮ (ШАПКА) -->
-    <header class="custom-header">
-        <div class="header-container">
-            <div class="logo">Aliona Globall</div>
-            <nav>
-                <ul class="main-menu">
-                    <!-- ССЫЛКИ НА ВАШИ СТРАНИЦЫ (Относительные пути, которые не сломаются на GitHub) -->
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="page133820476.html">Каталог</a></li>
-                    <li><a href="page133820556.html">О нас</a></li>
-                    <li><a href="page133820656.html">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
+</head> 
+<body class="t-body" style="margin:0;"> 
+<div id="allrecords" class="t-records">
+    <!-- ВТОРАЯ ЧАСТЬ: ВЕРХНЕЕ МЕНЮ И ШАПКА -->
+    <header id="t-header" class="t-records"> 
+        <div id="rec2148572911" class="r t-rec t-rec_pb_0" style="padding-bottom:0px;background-color:#ffffff;" data-animationappear="off" data-record-type="258" data-bg-color="#ffffff"> 
+            <div id="nav2148572911marker"></div> 
+            <div class="tmenu-mobile"> 
+                <div class="tmenu-mobile__container"> 
+                    <div class="tmenu-mobile__text t-name t-name_md" field="menu_mob_title">&nbsp;</div> 
+                    <button type="button" class="t-menuburger t-menuburger_fourth" aria-label="Навигационное меню" aria-expanded="false"> 
+                        <span style="background-color:#000;"></span> <span style="background-color:#000;"></span> <span style="background-color:#000;"></span> <span style="background-color:#000;"></span> 
+                    </button> 
+                    <script>
+                        function t_menuburger_init(recid) {
+                            var rec=document.querySelector('#rec' + recid);if(!rec) return;
+                            var burger=rec.querySelector('.t-menuburger');if(!burger) return;
+                            burger.addEventListener('click',function() {
+                                burger.classList.toggle('t-menuburger-opened');
+                            });
+                        }
+                        t_onReady(function() {t_onFuncLoad('t_menuburger_init',function(){t_menuburger_init('2148572911');});});
+                    </script> 
+                </div> 
+            </div> 
+            
+            <div id="nav2148572911" class="t229 t229__positionfixed t229__beforeready tmenu-mobile__menucontent_hidden" style="background-color: rgba(255,255,255,0.90); height:80px;" data-menu="yes"> 
+                <div class="t229__maincontainer" style="height:80px;"> 
+                    <div class="t229__padding40px"></div> 
+                    <nav class="t229__centerside"> 
+                        <ul role="list" class="t-menu__list"> 
+                            <li class="t229__list_item" style="padding:0 15px 0 0;"> <a class="t-menu__link-item" href="index.html#rec1240270621">Об авторе</a> </li> 
+                            <li class="t229__list_item" style="padding:0 15px;"> <a class="t-menu__link-item" href="page133820476.html">Галерея</a> </li> 
+                            <li class="t229__list_item" style="padding:0 15px;"> <a class="t-menu__link-item" href="index.html#rec1240270656">Доставка</a> </li> 
+                            <li class="t229__list_item" style="padding:0 0 0 15px;"> <a class="t-menu__link-item" href="page133820656.html">Контакты</a> </li> 
+                        </ul> 
+                    </nav> 
+                    <div class="t229__padding40px"></div> 
+                </div> 
+            </div> 
+            <script>t_onReady(function() {var rec=document.querySelector('#rec2148572911');if(!rec) return;var burger=rec.querySelector('.t-menuburger');if(burger) {t_onFuncLoad('t_menu__createMobileMenu',function() {t_menu__createMobileMenu('2148572911','.t229');});} t_onFuncLoad('t_menu__highlightActiveLinks',function() {t_menu__highlightActiveLinks('.t229__list_item a');});rec.querySelector('.t229').classList.remove('t229__beforeready');t_onFuncLoad('t_menu__findAnchorLinks',function() {t_menu__findAnchorLinks('2148572911','.t229__list_item a');});});</script> 
+            <script>t_onReady(function() {t_onFuncLoad('t_menu__setBGcolor',function() {t_menu__setBGcolor('2148572911','.t229');window.addEventListener('load',function() {t_menu__setBGcolor('2148572911','.t229');});window.addEventListener('resize',t_throttle(function() {t_menu__setBGcolor('2148572911','.t229');}));});});</script> 
+            <script>t_onReady(function() {t_onFuncLoad('t_menu__showFixedMenu',function() {t_menu__showFixedMenu('2148572911','.t229');window.addEventListener('scroll',t_throttle(function() {t_menu__showFixedMenu('2148572911','.t229')}));});});</script> 
+            <script>t_onReady(function() {t_onFuncLoad('t_menu__changeBgOpacity',function() {t_menu__changeBgOpacity('2148572911','.t229');window.addEventListener('scroll',t_throttle(function() {t_menu__changeBgOpacity('2148572911','.t229');}));});});</script> 
+        </div> 
     </header>
+    <!-- ТРЕТЬЯ ЧАСТЬ: ГЛАВНЫЙ КОНТЕНТ (КАРТИНЫ, АВТОР, ДОСТАВКА) -->
+    <div id="rec1240270616" class="r t-rec t-rec_pt_180 t-rec_pb_165" style="padding-top:180px;padding-bottom:165px;" data-record-type="480"> 
+        <div class="t480"> 
+            <div class="t-container t-container_flex t480-container__middle"> 
+                <div class="t480__top t480__col t-col t-col_6"> 
+                    <div class="t480__blockimg t-bgimg" style="background-image:url('images/tild3131-3035-4461-b461-353137333238__photo_2024-11-16_17-.jpg'); height:560px; background-size:cover; background-position:center;"> </div> 
+                </div> 
+                <div class="t480__col t-col t-col_6"> 
+                    <div class="t480__textwrapper t-align_center"> 
+                        <div class="t480__content t-valign_middle"> 
+                            <h2 class="t480__title t-title t-title_xs t-margin_auto" field="title">АЛЕНА ГЛОБАЛЛ<br />Детство в нас</h2> 
+                            <div class="t480__uptitle t-descr t-descr_xs t-margin_auto" field="subtitle">авторское видение картины как метода влияния на нас</div> 
+                            <div class="t-divider t480__line t-margin_auto" style="background-color:#000; height:1px; width:40px; margin:20px auto;"></div> 
+                            <div class="t480__descr t-descr t-descr_md t-margin_auto" field="descr">Говорят детство в нас постоянно, от момента рождения и на всю жизнь. Картины Алены Глоблл как раз напоминают нам о детстве, о теплом времени где краски ярче и небо чище, где мы еще способны мечтать.</div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
 
-    <!-- СТАРТОВАЯ ОБЛОЖКА САЙТА С АНИМАЦИЕЙ -->
-    <section class="hero-section">
-        <h1>Интернет-магазин картин</h1>
-        <p style="font-size: 18px; max-width: 600px;">Добро пожаловать в галерею авторского искусства Aliona Globall</p>
-    </section>
+    <div id="rec1240270621" class="r t-rec"> 
+        <a name="avtor" style="font-size:0;"></a> 
+    </div> 
 
-    <!-- КРАСИВЫЙ ПОДВАЛ С ВАШИМ БРЕНДИНГОМ -->
-    <footer class="custom-footer">
-        <div class="footer-container">
-            <p>&copy; 2026 Aliona Globall. Все права защищены. Интернет-магазин картин.</p>
-            <div class="footer-studio">
-                Сайт разработан в качестве образца автора-студии 
-                <a href="https://saitlaim.ru" target="_blank" rel="noopener">САЙТЛАЙМ</a>
-            </div>
-        </div>
-    </footer>
+    <div id="rec1240270626" class="r t-rec t-rec_pt_15" style="padding-top:15px;" data-animationappear="off" data-record-type="492"> 
+        <div class="t492"> 
+            <div class="t-container" style="display:flex; flex-wrap:wrap; background-color:#fff; border-radius:8px; overflow:hidden;"> 
+                <div style="flex:1; min-width:300px; padding:40px;"> 
+                    <h1 class="t-title t-title_xxs" field="title" style="margin-top:0;">Об авторе Алена Глобалл</h1> 
+                    <div class="t-descr t-descr_md" field="descr" style="line-height:1.6; color:#333;">
+                        Алена выросла в Москве. Это высотки, магазины, парки, машины и магистрали в сером платье цемента. Казалось бы все это далеко от цветной Индии, загорода, синего неба деревни, но в ее творчестве яркие цвета взрывают серость будней, дарят тепло якрих красок, якрость дней детства, счастья, нового взгляда на жизнь. Это как утреннее пробуждение, свежий глаток новой жизни.<br /><br />
+                        Иногда нам не хватает детсва, не хватает света, не хватает новых идей. Смотря на ее картины хочется снова что-то делать, куда-то бежать к своим мечтам, буд-то времени вовсе и нет, буд-то снова начало, великое начало настоящего.<br /><br />
+                        Картины украсят ваш дом, квартиру, комнату, спальню молодой пары, а возможно и строгий офис бизнесмена мечтающего о семье и детях. Станут искоркой счастья и домашнего уюта.<br /><br />
+                    </div> 
+                    <a class="t-btn" href="page133820476.html" style="display:inline-block; padding:15px 30px; background-color:#c34747; color:#fff; text-decoration:none; border-radius:4px; font-weight:bold; text-transform:uppercase; font-size:13px;">Галерея</a> 
+                </div> 
+                <div style="flex:1; min-width:300px; background-image:url('images/tild3833-3462-4130-b939-643730633837__noroot.png'); background-size:cover; background-position:center; min-height:450px;"></div> 
+            </div> 
+        </div> 
+    </div> 
 
-</body>
-</html>
+    <div id="rec1240270656" class="r t-rec"> 
+        <a name="dostavka" style="font-size:0;"></a> 
+    </div> 
+
+    <div id="rec1240270661" class="r t-rec t-rec_pt_135 t-rec_pb_210" style="padding-top:135px;padding-bottom:210px;" data-record-type="565"> 
+        <div class="t565"> 
+            <div class="t-section__container t-container t-container_flex"> 
+                <div class="t-col t-col_12"> 
+                    <div class="js-block-header-title t-section__title t-title t-title_xs t-align_center t-margin_auto" field="btitle" style="text-align:center; font-size:28px; font-weight:700; margin-bottom:60px;">Доставка</div> 
+                </div> 
+            </div> 
+            <div class="t-container t565__container" style="max-width:800px; margin:0 auto;"> 
+                <div class="t565__item t-item" style="margin-bottom:30px;"> 
+                    <div class="t565__block" style="background:#fff; padding:20px; border-radius:6px; box-shadow:0 2px 10px rgba(0,0,0,0.03);"> 
+                        <div class="t565__title t-name t-name_lg" field="li_title__1739159119410" style="font-weight:700; margin-bottom:5px;">1. Получение заказа</div> 
+                        <div class="t565__descr t-text t-text_xs" field="li_descr__1739159119410">Вы выбираете картину из каталога или предложите свою идею и автор предложит вам макет-идею рисунка, если это то, что вы ожидали, то рисунок исполняется в цвете и доставляется вам.</div> 
+                    </div> 
+                </div> 
+                <div class="t565__item t-item" style="margin-bottom:30px;"> 
+                    <div class="t565__block" style="background:#fff; padding:20px; border-radius:6px; box-shadow:0 2px 10px rgba(0,0,0,0.03);"> 
+                        <div class="t565__title t-name t-name_lg" field="li_title__1749159119411" style="font-weight:700; margin-bottom:5px;">2. Согласование и оплата</div> 
+                        <div class="t565__descr t-text t-text_xs" field="li_descr__1749159119411">Если рисунок вам понравился, вы оплачиваете рисунок и доставку — сразу или по доставке.</div> 
+                    </div> 
+                </div> 
+                <div class="t565__item t-item"> 
+                    <div class="t565__block" style="background:#fff; padding:20px; border-radius:6px; box-shadow:0 2px 10px rgba(0,0,0,0.03);"> 
+                        <div class="t565__title t-name t-name_lg" field="li_title__1749159119412" style="font-weight:700; margin-bottom:5px;">3. Доставка рисунка</div> 
+                        <div class="t565__descr t-text t-text_xs" field="li_descr__1749159119412">Рисунок можете получить через СДЕК, почта, авито.</div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div>
