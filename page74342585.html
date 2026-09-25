@@ -248,15 +248,11 @@
             </div> 
         </div> 
     </footer>
-
-    <!-- Этот код принудительно разворачивает правую иконку в нужную сторону -->
+        </footer>
     <style>
-        .t1148__control_right svg { 
+        /* Принудительно разворачиваем правую стрелочку вправо */
+        .t1148__control_right svg, [aria-label="Next slide"] svg { 
             transform: rotate(180deg) !important; 
-        }
-        .t1148__controls {
-            display: flex !important;
-            gap: 12px !important;
         }
     </style>
 </body> 
