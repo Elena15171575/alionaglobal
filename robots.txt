@@ -1,21 +1,15 @@
-User-Agent: *
-Disallow: /page74342589.html
-Disallow: /dogovor-aliona
-Disallow: /page74342591.html
-Disallow: /cookie-aliona
-Disallow: /page133820476.html
-Disallow: /menu
-Disallow: /page133820556.html
-Disallow: /pop
-Disallow: /tilda/form*
-Disallow: /tilda/rec*
-Disallow: /tilda/click*
-Disallow: /tilda/scroll*
-Disallow: /tilda/popup*
-Disallow: /tilda/cart*
-Disallow: /tilda/product*
-Disallow: /tilda/event*
-Disallow:
+textUser-agent: *
+Disallow: /page74342589.html  # Закрываем от поиска Договор-оферту
+Disallow: /page74342591.html  # Закрываем от поиска Политику Cookie
+Disallow: /404.html           # Закрываем страницу ошибки 404
+Disallow: /readme.txt         # Закрываем техническую документацию
+Disallow: /.htaccess          # Закрываем конфигурационный файл
 
+# Разрешаем индексировать основные коммерческие страницы
+Allow: /index.html
+Allow: /page133820556.html
+Allow: /page133820476.html
+Allow: /page133820656.html
 
-Sitemap: http://alionagl.tilda.ws/sitemap.xml
+# Указываем поисковикам на вашу главную страницу на GitHub
+Sitemap: https://elena15171575.github.io/alionaglobal
