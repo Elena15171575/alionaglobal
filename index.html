@@ -100,15 +100,12 @@
     <!-- ВТОРАЯ ЧАСТЬ: ВЕРХНЕЕ МЕНЮ И ШАПКА -->
     <header id="t-header" class="t-records"> 
         <div id="rec2148572911" class="r t-rec t-rec_pb_0" style="padding-bottom:0px;background-color:#ffffff;" data-animationappear="off" data-record-type="258" data-bg-color="#ffffff"> 
-            <div id="nav2148572911" class="t229 t229__positionfixed" style="background-color: rgba(255,255,255,0.95); height:80px; width:100%; position:fixed; top:0; left:0; z-index:999; border-bottom:1px solid #eaeaea;" data-menu="yes"> 
+            <!-- ВЕРХНЕЕ МЕНЮ С АНИМИРОВАННОЙ ЛИАНОЙ И РАСПУСКАЮЩИМИСЯ ЦВЕТАМИ -->
+            <div id="nav2148572911" class="t229 t229__positionfixed" style="background-color: rgba(255,255,255,0.95); height:80px; width:100%; position:fixed; top:0; left:0; z-index:999;" data-menu="yes"> 
                 <div style="height:80px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;"> 
-                    
-                    <!-- Крупный жирный логотип Алены -->
                     <div style="font-size:20px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; font-family:'TildaSans',Arial,sans-serif;">
                         <a href="index.html" style="color: #000000; text-decoration: none;">Aliona Globall</a>
                     </div>
-
-                    <!-- Крупные адаптивные пункты меню -->
                     <nav> 
                         <ul style="display: flex; list-style: none; gap: 30px; margin: 0; padding: 0; font-family:'TildaSans',Arial,sans-serif;"> 
                             <li class="t229__list_item"> <a href="index.html#rec1240270621" style="color:#895171; text-decoration:none; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Об авторе</a> </li> 
@@ -117,7 +114,47 @@
                             <li class="t229__list_item"> <a href="page133820656.html" style="color:#000000; text-decoration:none; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Контакты</a> </li> 
                         </ul> 
                     </nav> 
-                </div> 
+                </div>
+
+                <!-- Контейнер для нашей интерактивной лианы -->
+                <div class="liana-progress-container" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 6px; background-color: #f3ebe6; overflow: visible;">
+                    <!-- Сама растущая зеленая лиана -->
+                    <div id="liana-line" style="height: 100%; width: 0%; background: linear-gradient(90deg, #5a8f56, #82b77d); transition: width 0.1s ease-out; position: relative;">
+                        
+                        <!-- Маленькие цветочки, которые распускаются при прокрутке -->
+                        <span class="flower" id="fl-1" style="position: absolute; right: 80%; top: -3px; font-size: 12px; transform: scale(0); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;">🌸</span>
+                        <span class="flower" id="fl-2" style="position: absolute; right: 50%; top: -3px; font-size: 12px; transform: scale(0); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;">🌸</span>
+                        <span class="flower" id="fl-3" style="position: absolute; right: 20%; top: -3px; font-size: 12px; transform: scale(0); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;">🌸</span>
+                        <span class="flower" id="fl-4" style="position: absolute; right: 2%; top: -3px; font-size: 14px; transform: scale(0); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;">🌺</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Умный скрипт отслеживания скролла для роста лианы -->
+            <script type="text/javascript">
+                window.addEventListener('scroll', function() {
+                    var winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    var scrolled = (winScroll / height) * 100;
+                    
+                    // Заставляем лиану расти в процентах от прокрутки страницы
+                    var liana = document.getElementById('liana-line');
+                    if (liana) {
+                        liana.style.width = scrolled + '%';
+                    }
+
+                    // Логика распускания цветочков при достижении определенного скролла
+                    var f1 = document.getElementById('fl-1');
+                    var f2 = document.getElementById('fl-2');
+                    var f3 = document.getElementById('fl-3');
+                    var f4 = document.getElementById('fl-4');
+
+                    if (f1) f1.style.transform = scrolled >= 20 ? 'scale(1) rotate(15deg)' : 'scale(0)';
+                    if (f2) f2.style.transform = scrolled >= 50 ? 'scale(1) rotate(-10deg)' : 'scale(0)';
+                    if (f3) f3.style.transform = scrolled >= 80 ? 'scale(1) rotate(20deg)' : 'scale(0)';
+                    if (f4) f4.style.transform = scrolled >= 97 ? 'scale(1.2) rotate(0deg)' : 'scale(0)';
+                });
+            </script>
             </div> 
             
             <div id="nav2148572911" class="t229 t229__positionfixed t229__beforeready tmenu-mobile__menucontent_hidden" style="background-color: rgba(255,255,255,0.90); height:80px;" data-menu="yes"> 
